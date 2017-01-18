@@ -13,8 +13,9 @@ class Todo extends React.Component {
 	}
 	onDeleteToDo(i){
 		alert(`${i}番目を削除`)
+		this.state.todos.splice(i, 1)
 		this.setState({
-			// todos : this.state.todos.splice(i, 1)
+			todos : this.state.todos
 		});
 	}
 	render () {
