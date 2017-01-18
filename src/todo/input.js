@@ -1,6 +1,7 @@
 import React from 'react'
+import { Component } from 'react'
 
-class TodoInput extends React.Component {
+class TodoInput extends Component {
   _onAddToDo(){
 		var newTodo = this.refs.todo.value.trim();
 		this.props.onAddToDo(newTodo);

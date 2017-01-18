@@ -1,6 +1,7 @@
 import React from 'react'
+import { Component } from 'react'
 
-class TodoList extends React.Component {
+class TodoList extends Component {
 	_onDeleteToDo(i){
 	  this.props.onDeleteToDo(i);
 	}
