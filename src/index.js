@@ -6,5 +6,5 @@ Todo.defaultProps = {initialTodos: [{todo:"foo"},{todo:"bar"}]};
 
 ReactDOM.render(
 	<Todo />,
-	document.getElementById('root')
+	document.getElementById('app')
 );
