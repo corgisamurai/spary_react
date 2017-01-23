@@ -8,8 +8,7 @@ class TodoInput extends Component {
 		this.refs.todo.value="";
 	}
 	_getOnsen(){
-    console.log("Onsen");
-    axios.post('localhost:8080/onsen/list')
+    axios.post('/api/onsen/list')
       .then(function (res) {
         console.log(res.data);
       });
