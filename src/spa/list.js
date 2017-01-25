@@ -29,8 +29,8 @@ class SpaList extends Component {
 		let spaList = []
 		this.state.spas.forEach(function(spa){
 			spaList.push(
-				<a href={'/spa/' + spa.id}>
-					<div>
+				<a key={spa.id} href={'/spa/' + spa.id}>
+					<div >
 						<p>温泉名：{spa.name}</p>
 						<p>住所：{spa.address}</p>
 						<hr/>
