@@ -26,10 +26,14 @@ class SpaList extends Component {
 		};
 	}
 	render () {
+		let spaItem = {
+			"color": "black",
+			"text-decoration": "none"
+		};
 		let spaList = []
 		this.state.spas.forEach(function(spa){
 			spaList.push(
-				<a key={spa.id} href={'/spa/' + spa.id}>
+				<a key={spa.id} href={'/spa/' + spa.id} style={spaItem}>
 					<div >
 						<p>温泉名：{spa.name}</p>
 						<p>住所：{spa.address}</p>
