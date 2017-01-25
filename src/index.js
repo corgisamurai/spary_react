@@ -21,6 +21,6 @@ ReactDOM.render(
 ReactDOM.render((
   <Router history={browserHistory}>
     <Route path="/" component={SpaList}></Route>
-    <Route path="/spa/1" component={SpaDetail}></Route>
+    <Route path="/spa/:id" component={SpaDetail}></Route>
   </Router>
 ), document.getElementById('spa'))
