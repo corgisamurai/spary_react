@@ -4,6 +4,12 @@ import { Component } from 'react'
 class SpaList extends Component {
 	constructor(props) {
 		super(props);
+		axios
+			.post('/api/onsen/list')
+			.then(function (res) {
+				console.log('ここでGoからもらったJSONをstateに入れる');
+				console.log(res.data);
+			})
 		this.state = {
 			spas: [
 				{
@@ -23,7 +29,7 @@ class SpaList extends Component {
 		let spaList = []
 		for(var i in this.state.spas){
 			spaList.push(
-				<a href="/spa/1">
+				<a href={'/spa/' + this.state.spas[i].id}>
 					<div>
 						<p>温泉名：{this.state.spas[i].name}</p>
 						<p>住所：{this.state.spas[i].address}</p>
