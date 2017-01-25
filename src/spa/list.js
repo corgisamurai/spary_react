@@ -7,10 +7,12 @@ class SpaList extends Component {
 		this.state = {
 			spas: [
 				{
+					id: 1,
 					name: '木下温泉',
 					address: '東日本橋'
 				},
 				{
+					id: 2,
 					name: '大坂温泉',
 					address: '博多'
 				},
@@ -21,11 +23,13 @@ class SpaList extends Component {
 		let spaList = []
 		for(var i in this.state.spas){
 			spaList.push(
-				<div>
-					<p>温泉名：{this.state.spas[i].name}</p>
-					<p>住所：{this.state.spas[i].address}</p>
-					<hr/>
-				</div>
+				<a href="/spa/1">
+					<div>
+						<p>温泉名：{this.state.spas[i].name}</p>
+						<p>住所：{this.state.spas[i].address}</p>
+						<hr/>
+					</div>
+				</a>
 			);
 		}
 		return (
