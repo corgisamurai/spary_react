@@ -7,7 +7,7 @@ class SpaList extends Component {
 	constructor(props) {
 		super(props);
 		axios
-			.post('/api/onsen/list')
+			.post('/api/spa/list')
 			.then(function (res) {
 				console.log('ここでGoからもらったJSONをstateに入れる');
 				console.log(res.data);
