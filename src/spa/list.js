@@ -27,17 +27,17 @@ class SpaList extends Component {
 	}
 	render () {
 		let spaList = []
-		for(var i in this.state.spas){
+		this.state.spas.forEach(function(spa){
 			spaList.push(
-				<a href={'/spa/' + this.state.spas[i].id}>
+				<a href={'/spa/' + spa.id}>
 					<div>
-						<p>温泉名：{this.state.spas[i].name}</p>
-						<p>住所：{this.state.spas[i].address}</p>
+						<p>温泉名：{spa.name}</p>
+						<p>住所：{spa.address}</p>
 						<hr/>
 					</div>
 				</a>
 			);
-		}
+		});
 		return (
 			<div>
 				{spaList}
