@@ -6,26 +6,15 @@ import { Link } from 'react-router';
 class SpaList extends Component {
 	constructor(props) {
 		super(props);
+		this.state = { spas: [] }
+	}
+	componentDidMount () {
+		let self = this
 		axios
 			.post('/api/spa/list')
 			.then(function (res) {
-				console.log('ここでGoからもらったJSONをstateに入れる');
-				console.log(res.data);
+				self.setState({spas: res.data.spa})
 			})
-		this.state = {
-			spas: [
-				{
-					id: 1,
-					name: '木下温泉',
-					address: '東日本橋'
-				},
-				{
-					id: 2,
-					name: '大坂温泉',
-					address: '博多'
-				},
-			]
-		};
 	}
 	render () {
 		let spaItem = {
