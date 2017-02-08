@@ -14,9 +14,9 @@ class SpaList extends Component {
 	getSpaList () {
 		axios
 		.post('/api/spa/list')
-		.then(function (res) {
+		.then((res) => {
 			this.setState({spas: res.data.spa})
-		}.bind(this))
+		})
 	}
 	render () {
 		let spaItem = {
