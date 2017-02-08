@@ -9,6 +9,9 @@ class SpaList extends Component {
 		this.state = { spas: [] }
 	}
 	componentDidMount () {
+		this.getSpaList()
+	}
+	getSpaList () {
 		axios
 		.post('/api/spa/list')
 		.then(function (res) {
