@@ -9,17 +9,16 @@ class SpaList extends Component {
 		this.state = { spas: [] }
 	}
 	componentDidMount () {
-		let self = this
 		axios
-			.post('/api/spa/list')
-			.then(function (res) {
-				self.setState({spas: res.data.spa})
-			})
+		.post('/api/spa/list')
+		.then(function (res) {
+			this.setState({spas: res.data.spa})
+		}.bind(this))
 	}
 	render () {
 		let spaItem = {
 			"color": "black",
-			"text-decoration": "none"
+			"textDecoration": "none"
 		};
 		let spaList = []
 		this.state.spas.forEach(function(spa){
