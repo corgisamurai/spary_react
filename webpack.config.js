@@ -12,7 +12,7 @@ module.exports = {
   devServer: {
     contentBase: 'public',
      proxy: {
-      "/api/*": "http://localhost:8080" 
+      "/v1/*": "http://localhost:8080" 
     }
   }
 }
