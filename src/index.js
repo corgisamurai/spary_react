@@ -4,7 +4,6 @@ import SpaList from './spa/list'
 import SpaDetail from './spa/detail'
 import { Router, Route, Link, browserHistory } from 'react-router'
 
-
 // import Todo from './todo/todo'
 
 // Todo.defaultProps = {initialTodos: [{todo:"foo"},{todo:"bar"}]};
