@@ -12,11 +12,6 @@ import { Router, Route, Link, browserHistory } from 'react-router'
 // 	document.getElementById('app')
 // );
 
-ReactDOM.render(
-	<SpaList />,
-	document.getElementById('spa')
-);
-
 ReactDOM.render((
   <Router history={browserHistory}>
     <Route path="/" component={SpaList}></Route>
