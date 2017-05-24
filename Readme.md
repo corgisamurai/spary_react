@@ -1,1 +1,2 @@
- ## Installation
+ # run
+ npm start
