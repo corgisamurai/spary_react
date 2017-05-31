@@ -5,27 +5,20 @@ import { Link } from 'react-router';
 
 
 class SpaLogin extends Component {
-
   _onSubmit(e){
-    this.props.router.push({
-      pathname:'/spa'
-    })
-    // var ReactRouter = require('react-router');
-    // var history = ReactRouter.History;
-    // history.push('/spa');
-    // var id = this.refs.id.value.trim();
-    // var password = this.refs.password.value.trim();
-    // console.log("id is :"+id);
-    // console.log("password is :"+ password);
-    //
-    // axios.get('/v1/auth/'+id+'/'+password).then(function (res) {
-    //    if(res.data=='success'){
-    //      console.log("true");
-    //        return true;
-    //    }else{
-    //      return false;
-    //    }
-    //  });
+    var id = this.refs.id.value.trim();
+    var password = this.refs.password.value.trim();
+    console.log("id is :"+id);
+    console.log("password is :"+ password);
+    var p = this.props;
+    axios.get('/v1/auth/'+id+'/'+password).then(function (res) {
+      if(res.data=='success'){
+        console.log("true");
+        p.router.push({
+        pathname:'/spa'
+        })
+      }
+    });
   }
 
 	render () {
